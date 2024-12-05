@@ -1,0 +1,24 @@
+/* Correct usage of calc() function */
+
+.container {
+  width: calc(100% - 20px); /* Correct: Units provided for all values */
+}
+
+.element {
+  height: calc(50% + 10px);
+}
+
+.anotherElement {
+  width: calc(100vw - (20px + 10px)); /* Correct Nesting*/
+}
+
+/* Incorrect usage */
+/* .incorrect-container {
+  width: calc(100% - 20); /* Incorrect: Missing Units */
+} */
+/* .incorrect-nesting {
+  width: calc(calc(50% - 10px) + 20px); /* Incorrect: Nested calc() can be problematic*/
+} */
+/* .incorrect-precedence {
+  width: calc(100% - 10 * 2px); /* Incorrect precedence, might not produce expected results*/
+} */
